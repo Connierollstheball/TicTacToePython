@@ -16,13 +16,8 @@ gridvals = [0] * 9
 # The value of the winner - 0 for no winner, 1 or 2 for either 1 or 2 being the winner.
 winner = 0
 
-# This assigns all of the gridvals[0-8] values to 0 (default), and also assigns the value of gridfilled, which will be useful to check for ties.
-x = 0
+# Assign the gridsfilled value. This will be useful for detecting ties.
 gridsfilled = 0
-
-while x < 9:
-    gridvals[x] = 0
-    x += 1
 
 # This function checks if there are any winners or not. If there are, return the value of the winnter.
 def checkforwin(tocheckfor):
