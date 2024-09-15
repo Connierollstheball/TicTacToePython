@@ -60,11 +60,11 @@ def interpretTicTacNumber(numb):
             return None
 
 # Function used by checkforWin to report a win (or a tie).
-def reportWin(val):
+def reportWin(winnerval):
     drawBoard()
 
     # If the reported value was 0, declare it a Tie.
-    if val == 0:
+    if winnerval == 0:
         print('Tie! No one wins.')
         messagebox.showinfo('Game Over', 'Tie! No one wins.')
         exit()
