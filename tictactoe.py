@@ -13,9 +13,6 @@ os.system('cls')
 # Initiate the grid. It should only have 9 spots.
 gridvals = [0] * 9
 
-# The value of the winner - 0 for no winner, 1 or 2 for either 1 or 2 being the winner.
-winner = 0
-
 # Assign the gridsfilled value. This will be useful for detecting ties.
 gridsfilled = 0
 
@@ -63,11 +60,11 @@ def interpretTicTacNumber(numb):
             return None
 
 # Function used by checkforWin to report a win (or a tie).
-def reportWin(winnerval):
+def reportWin(val):
     drawBoard()
 
     # If the reported value was 0, declare it a Tie.
-    if winnerval == 0:
+    if val == 0:
         print('Tie! No one wins.')
         messagebox.showinfo('Game Over', 'Tie! No one wins.')
         exit()
